@@ -42,4 +42,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 				.collect(Collectors.toList());
 	}
 
+	@Override
+	public EmployeeDto updateEmployee(Long employeeId, EmployeeDto updateEmployee) {
+		return null;
+	}
+
 }
