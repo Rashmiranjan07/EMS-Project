@@ -25,4 +25,11 @@ public class EmployeeController {
 		return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
 	}
 
+	// build Get Employee Rest Api
+	public ResponseEntity<EmployeeDto> getEmployeeById(Long employeeId) {
+		EmployeeDto employeeDto = employeeService.getEmployeeById(employeeId);
+		return ResponseEntity.ok(employeeDto);
+
+	}
+
 }
