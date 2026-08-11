@@ -1,35 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 
 const ListEmployeeComponent = () => {
 
-    const dummyData = [
-        {
-            "id": 1,
-            "firstName": "Rashmiranjan",
-            "lastName": "Shaw",
-            "email": "heyyrashmiranjan02@gmail.com"
-        },
-        {
-            "id": 2,
-            "firstName": "Rashmiranjan",
-            "lastName": "Shaw",
-            "email": "heyyrashmiranjan02@gmail.com"
-        },
-        {
-            "id": 3,
-            "firstName": "Rashmiranjan",
-            "lastName": "Shaw",
-            "email": "heyyrashmiranjan02@gmail.com"
-        },
-        {
-            "id": 4,
-            "firstName": "Rashmiranjan",
-            "lastName": "Shaw",
-            "email": "heyyrashmiranjan02@gmail.com"
-        }
-    ]
-
-
+    const [employees, setEmployees] = useState([])
 
     return (
         <div className='container'>
