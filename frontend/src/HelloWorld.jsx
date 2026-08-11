@@ -1,5 +1,5 @@
 function HelloWorld(){
-    return <h1>Helllo World !</h1>
+    return <h1 className="text-center">Helllo World !</h1>
 
 }
 
