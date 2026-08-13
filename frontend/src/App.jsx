@@ -7,9 +7,13 @@ import { BrowserRouter } from 'react-router-dom'
 function App() {
   return (
     <div>
-      <HeaderComponent />
-      <ListEmployeeComponent />
-      <FooterComponent  />
+      <BrowserRouter>
+
+        <HeaderComponent />
+        <ListEmployeeComponent />
+        <FooterComponent />
+
+      </BrowserRouter>
     </div>
   )
 }
