@@ -12,9 +12,10 @@ function App() {
         <HeaderComponent />
         <Routes>
           // http://localhost:3000
-          <Route path='/' element={ <ListEmployeeComponent />}>
+          <Route path='/' element={ <ListEmployeeComponent />}></Route>
+          // http://localhost:3000/employees
+          <Route path='/employees' element={ <ListEmployeeComponent />}></Route>
 
-          </Route>
         </Routes>
         
         <FooterComponent />
