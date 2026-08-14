@@ -19,6 +19,7 @@ const ListEmployeeComponent = () => {
         <div className="container">
 
             <h2 className="text-center">List of Employees</h2>
+            <button className='btn btn-primary mb-2'>Add Employee</button>
 
             <table className="table table-striped table-bordered">
                 <thead>
