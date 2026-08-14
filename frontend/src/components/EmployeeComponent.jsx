@@ -12,6 +12,10 @@ const EmployeeComponent = () => {
         setFirstName(e.target.value);
     }
 
+     function handleLastName(e){
+        setLastName(e.target.value);
+    }
+
 
 
     return (
