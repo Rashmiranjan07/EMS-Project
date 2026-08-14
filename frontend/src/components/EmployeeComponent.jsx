@@ -20,6 +20,13 @@ const EmployeeComponent = () => {
         setEmail(e.target.value);
     }
 
+     function saveEmployee(e) {
+        e.preventDefault();
+
+        const employee = {firstName,lastName,email}
+        console.log(employee)
+    }
+
 
 
     return (
