@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const EmployeeComponent = () => {
-  return (
-    <div>
 
-        
-    </div>
-  )
+    const[firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('')
+
+
+
+    return (
+        <div>
+
+
+        </div>
+    )
 }
 
 export default EmployeeComponent
