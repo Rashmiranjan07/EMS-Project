@@ -2,21 +2,21 @@ import React, { useState } from 'react'
 
 const EmployeeComponent = () => {
 
-    const[firstName, setFirstName] = useState('')
+    const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
 
 
 
-    function handleFirstName(e){
+    function handleFirstName(e) {
         setFirstName(e.target.value);
     }
 
-     function handleLastName(e){
+    function handleLastName(e) {
         setLastName(e.target.value);
     }
 
-    function handleEmail(e){
+    function handleEmail(e) {
         setEmail(e.target.value);
     }
 
@@ -31,43 +31,45 @@ const EmployeeComponent = () => {
                         <form>
                             <div className='form-group mb-2'>
                                 <label className='form-label'>First Name: </label>
-                               <input
-                               type='text'
-                               placeholder='Enter Employee First Name'
-                               name='firstName'
-                               value={firstName}
-                               className='form-control'
-                               onChange={handleFirstName}
-                               >
-                               </input>
+                                <input
+                                    type='text'
+                                    placeholder='Enter Employee First Name'
+                                    name='firstName'
+                                    value={firstName}
+                                    className='form-control'
+                                    onChange={handleFirstName}
+                                >
+                                </input>
                             </div>
 
 
-                             <div className='form-group mb-2'>
+                            <div className='form-group mb-2'>
                                 <label className='form-label'>Last Name: </label>
-                               <input
-                               type='text'
-                               placeholder='Enter Employee Last Name'
-                               name='laststName'
-                               value={lastName}
-                               className='form-control'
-                               onChange={handleLastName}
-                               >
-                               </input>
+                                <input
+                                    type='text'
+                                    placeholder='Enter Employee Last Name'
+                                    name='laststName'
+                                    value={lastName}
+                                    className='form-control'
+                                    onChange={handleLastName}
+                                >
+                                </input>
                             </div>
 
                             <div className='form-group mb-2'>
                                 <label className='form-label'>Email: </label>
-                               <input
-                               type='password'
-                               placeholder='Enter Employee Email id'
-                               name='email'
-                               value={email}
-                               className='form-control'
-                               onChange={handleEmail}
-                               >
-                               </input>
+                                <input
+                                    type='password'
+                                    placeholder='Enter Employee Email id'
+                                    name='email'
+                                    value={email}
+                                    className='form-control'
+                                    onChange={handleEmail}
+                                >
+                                </input>
                             </div>
+
+                            <button className='btn btn-success'>Submit</button>
 
 
 
