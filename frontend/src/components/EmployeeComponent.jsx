@@ -69,7 +69,7 @@ const EmployeeComponent = () => {
                                 </input>
                             </div>
 
-                            <button className='btn btn-success'>Submit</button>
+                            <button className='btn btn-success' onClick={saveEmployee}>Submit</button>
 
 
 
