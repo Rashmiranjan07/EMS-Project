@@ -1,6 +1,7 @@
 import { create } from 'axios'
 import React, { useState } from 'react'
 import { createEmployee } from '../services/EmployeeService'
+import { useNavigate } from 'react-router-dom'
 
 const EmployeeComponent = () => {
 
@@ -11,12 +12,11 @@ const EmployeeComponent = () => {
 
 
     // const handleFirstName = (e) => setFirstName(e.target.value);
-
-
     // const handleLastName =(e) => setLastName(e.target.value);
-
-
     // const handleEmail =(e) => setEmail(e.target.value);
+
+
+    const navigator = useNavigate();
 
     function saveEmployee(e) {
         e.preventDefault();
@@ -26,6 +26,7 @@ const EmployeeComponent = () => {
 
         createEmployee(employee).then((response) =>{
             console.log(response.data);
+            navigator('/employees')
         })
 
     }
