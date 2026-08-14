@@ -16,6 +16,10 @@ const EmployeeComponent = () => {
         setLastName(e.target.value);
     }
 
+    function handleEmail(e){
+        setEmail(e.target.value);
+    }
+
 
 
     return (
@@ -26,7 +30,7 @@ const EmployeeComponent = () => {
                     <div className='card-body'>
                         <form>
                             <div className='form-group mb-2'>
-                                <label className='form-label'>First Name</label>
+                                <label className='form-label'>First Name: </label>
                                <input
                                type='text'
                                placeholder='Enter Employee First Name'
@@ -40,7 +44,7 @@ const EmployeeComponent = () => {
 
 
                              <div className='form-group mb-2'>
-                                <label className='form-label'>Last Name</label>
+                                <label className='form-label'>Last Name: </label>
                                <input
                                type='text'
                                placeholder='Enter Employee Last Name'
@@ -50,7 +54,19 @@ const EmployeeComponent = () => {
                                onChange={handleLastName}
                                >
                                </input>
+                            </div>
 
+                            <div className='form-group mb-2'>
+                                <label className='form-label'>Email: </label>
+                               <input
+                               type='password'
+                               placeholder='Enter Employee Email id'
+                               name='email'
+                               value={email}
+                               className='form-control'
+                               onChange={handleEmail}
+                               >
+                               </input>
                             </div>
 
 
