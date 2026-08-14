@@ -8,6 +8,10 @@ const EmployeeComponent = () => {
 
 
 
+    function handleFirstName
+
+
+
     return (
         <div className='container'>
             <div className='row'>
@@ -17,6 +21,15 @@ const EmployeeComponent = () => {
                         <form>
                             <div className='form-group mb-2'>
                                 <label className='form-label'>Employee First Name</label>
+                               <input
+                               type='text'
+                               placeholder='Enter Employee First Name'
+                               name='firstName'
+                               value={firstName}
+                               className='form-control'
+                               onChange={handleFirstName}
+                               >
+                               </input>
 
                             </div>
                         </form>
