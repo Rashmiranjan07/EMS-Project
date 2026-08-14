@@ -20,6 +20,7 @@ const ListEmployeeComponent = () => {
 
 
     function addNewEmployee(){
+        navigator('/add-employee')
 
     }
 
