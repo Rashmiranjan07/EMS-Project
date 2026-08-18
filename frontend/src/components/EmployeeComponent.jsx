@@ -1,6 +1,6 @@
 // import { create } from 'axios'
-import React, { useState } from 'react'
-import { createEmployee } from '../services/EmployeeService'
+import React, { useEffect, useState } from 'react'
+import { createEmployee, getEmployee } from '../services/EmployeeService'
 import { useNavigate, useParams } from 'react-router-dom'
 
 const EmployeeComponent = () => {
@@ -9,7 +9,7 @@ const EmployeeComponent = () => {
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
 
-    const{ id } = useParams();
+    const { id } = useParams();
 
     const [errors, setErrors] = useState({
         firstName: '',
@@ -24,6 +24,18 @@ const EmployeeComponent = () => {
 
 
     const navigator = useNavigate();
+
+    useEffect(() => {
+        if (id) {
+            getEmployee(id).then((response) => {
+                setFirstName(response.data.firstName);
+                setLastName(response.data.lastName);
+                setEmail(response.data.email);
+
+
+            })
+        }
+    }, [id])
 
     function saveEmployee(e) {
         e.preventDefault();
@@ -74,8 +86,8 @@ const EmployeeComponent = () => {
 
     }
 
-    function pageTitle(){
-        if(id){
+    function pageTitle() {
+        if (id) {
             return <h2 className='text-center'>Update Employee</h2>
         } else {
             return <h2 className='text-center'>Add Employee</h2>
