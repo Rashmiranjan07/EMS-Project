@@ -120,10 +120,11 @@ const EmployeeComponent = () => {
                                     placeholder='Enter Employee Email id'
                                     name='email'
                                     value={email}
-                                    className='form-control'
+                                    className={`form-control ${errors.email ? 'is-invalid' : ''}`}
                                     onChange={(e) => setEmail(e.target.value)}
                                 >
                                 </input>
+                                {errors.email && <div className='invalid-feedback'>{errors.email} </div>}
                             </div>
 
                             <button className='btn btn-success' onClick={saveEmployee}>Submit</button>
