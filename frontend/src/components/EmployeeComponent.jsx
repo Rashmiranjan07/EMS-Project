@@ -10,6 +10,12 @@ const EmployeeComponent = () => {
     const [email, setEmail] = useState('')
 
 
+    useState({
+        firstName:'',
+        lastName:'',
+        email:''
+    })
+
 
     // const handleFirstName = (e) => setFirstName(e.target.value);
     // const handleLastName =(e) => setLastName(e.target.value);
