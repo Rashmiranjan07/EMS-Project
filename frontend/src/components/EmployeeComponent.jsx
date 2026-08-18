@@ -31,8 +31,8 @@ const EmployeeComponent = () => {
                 setFirstName(response.data.firstName);
                 setLastName(response.data.lastName);
                 setEmail(response.data.email);
-
-
+            }).catch(error => {
+                console.error(error);
             })
         }
     }, [id])
