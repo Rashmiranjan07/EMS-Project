@@ -31,7 +31,7 @@ const EmployeeComponent = () => {
               const employee = { firstName, lastName, email }
         console.log(employee)
 
-        createEmployee(employee).then((response) =>{
+        createEmployee(employee).then((response) => {
             console.log(response.data);
             navigator('/employees')
         })
