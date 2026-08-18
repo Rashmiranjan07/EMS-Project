@@ -24,6 +24,10 @@ const ListEmployeeComponent = () => {
 
     }
 
+    function updateEmployee(){
+        navigator(`/edit-employee/${id}`)
+    }
+
     return (
         <div className="container">
 
