@@ -112,7 +112,7 @@ const EmployeeComponent = () => {
                         pageTitle()
                     }
                     <div className='card-body'>
-                        <form>
+                        <form onSubmit={saveOrUpdateEmployee}>
                             <div className='form-group mb-2'>
                                 <label className='form-label'>First Name: </label>
                                 <input
@@ -156,8 +156,9 @@ const EmployeeComponent = () => {
                                 {errors.email && <div className='invalid-feedback'>{errors.email} </div>}
                             </div>
 
-                            <button className='btn btn-success' onClick={saveOrUpdateEmployee}>Submit</button>
-
+                            <button type="submit" className="btn btn-success">
+                                {id ? 'Update' : 'Submit'}
+                            </button>
 
 
                         </form>
