@@ -44,7 +44,10 @@ const EmployeeComponent = () => {
         const errorsCopy = {... errors}
 
         if(firstName.trim()){
-            errorsCopy.firstName =
+            errorsCopy.firstName = '';
+        } else {
+            errorsCopy.firstName =" First name is required" ;
+            valid=false;
         }
     }
 
