@@ -10,10 +10,10 @@ const EmployeeComponent = () => {
     const [email, setEmail] = useState('')
 
 
-    const [errors, setErrors]=useState({
-        firstName:'',
-        lastName:'',
-        email:''
+    const [errors, setErrors] = useState({
+        firstName: '',
+        lastName: '',
+        email: ''
     })
 
 
@@ -27,14 +27,14 @@ const EmployeeComponent = () => {
     function saveEmployee(e) {
         e.preventDefault();
 
-        if(validateForm){
-              const employee = { firstName, lastName, email }
-        console.log(employee)
+        if (validateForm) {
+            const employee = { firstName, lastName, email }
+            console.log(employee)
 
-        createEmployee(employee).then((response) => {
-            console.log(response.data);
-            navigator('/employees')
-        })
+            createEmployee(employee).then((response) => {
+                console.log(response.data);
+                navigator('/employees')
+            })
 
         }
 
@@ -42,36 +42,36 @@ const EmployeeComponent = () => {
 
 
 
-    function validateForm(){
+    function validateForm() {
         let valid = true;
-        const errorsCopy = {... errors}
+        const errorsCopy = { ...errors }
 
-        if(firstName.trim()){
+        if (firstName.trim()) {
             errorsCopy.firstName = '';
         } else {
-            errorsCopy.firstName =" First name is required" ;
-            valid=false;
+            errorsCopy.firstName = " First name is required";
+            valid = false;
         }
 
-        if(lastName.trim()){
+        if (lastName.trim()) {
             errorsCopy.lastName = '';
         } else {
-            errorsCopy.lastName =" Last name is required" ;
-            valid=false;
+            errorsCopy.lastName = " Last name is required";
+            valid = false;
         }
 
-        if(email.trim()){
+        if (email.trim()) {
             errorsCopy.email = '';
         } else {
-            errorsCopy.email =" Email is required" ;
-            valid=false;
+            errorsCopy.email = " Email is required";
+            valid = false;
         }
 
         setErrors(errorsCopy);
 
         return valid;
 
-        
+
     }
 
 
@@ -91,11 +91,11 @@ const EmployeeComponent = () => {
                                     placeholder='Enter Employee First Name'
                                     name='firstName'
                                     value={firstName}
-                                    className={`form-control ${errors.firstName ? 'is-invalid': ''}`}
+                                    className={`form-control ${errors.firstName ? 'is-invalid' : ''}`}
                                     onChange={(e) => setFirstName(e.target.value)}
                                 >
                                 </input>
-                                {errors.firstName && <div className='invalid-feedback'>{errors.firstName} </div> }
+                                {errors.firstName && <div className='invalid-feedback'>{errors.firstName} </div>}
                             </div>
 
 
@@ -106,10 +106,11 @@ const EmployeeComponent = () => {
                                     placeholder='Enter Employee Last Name'
                                     name='laststName'
                                     value={lastName}
-                                    className='form-control'
+                                    className={`form-control ${errors.lastName ? 'is-invalid' : ''}`}
                                     onChange={(e) => setLastName(e.target.value)}
                                 >
                                 </input>
+                                {errors.lastName && <div className='invalid-feedback'>{errors.lastName} </div>}
                             </div>
 
                             <div className='form-group mb-2'>
