@@ -10,7 +10,7 @@ const EmployeeComponent = () => {
     const [email, setEmail] = useState('')
 
 
-    useState({
+    const [errors, setErrors]=useState({
         firstName:'',
         lastName:'',
         email:''
