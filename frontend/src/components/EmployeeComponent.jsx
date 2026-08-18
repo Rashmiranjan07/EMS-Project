@@ -71,7 +71,7 @@ const EmployeeComponent = () => {
                             <div className='form-group mb-2'>
                                 <label className='form-label'>Email: </label>
                                 <input
-                                    type='password'
+                                    type='text'
                                     placeholder='Enter Employee Email id'
                                     name='email'
                                     value={email}
