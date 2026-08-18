@@ -27,13 +27,16 @@ const EmployeeComponent = () => {
     function saveEmployee(e) {
         e.preventDefault();
 
-        const employee = { firstName, lastName, email }
+        if(validateForm){
+              const employee = { firstName, lastName, email }
         console.log(employee)
 
         createEmployee(employee).then((response) =>{
             console.log(response.data);
             navigator('/employees')
         })
+
+        }
 
     }
 
@@ -50,12 +53,23 @@ const EmployeeComponent = () => {
             valid=false;
         }
 
-         if(lastName.trim()){
+        if(lastName.trim()){
             errorsCopy.lastName = '';
         } else {
             errorsCopy.lastName =" Last name is required" ;
             valid=false;
         }
+
+        if(email.trim()){
+            errorsCopy.email = '';
+        } else {
+            errorsCopy.email =" Email is required" ;
+            valid=false;
+        }
+
+        setErrors(errorsCopy);
+
+        return valid;
 
         
     }
