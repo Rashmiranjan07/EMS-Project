@@ -1,4 +1,4 @@
-import { create } from 'axios'
+// import { create } from 'axios'
 import React, { useState } from 'react'
 import { createEmployee } from '../services/EmployeeService'
 import { useNavigate, useParams } from 'react-router-dom'
@@ -9,7 +9,7 @@ const EmployeeComponent = () => {
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
 
-    const{id} = useParams();
+    const{ id } = useParams();
 
     const [errors, setErrors] = useState({
         firstName: '',
@@ -113,7 +113,7 @@ const EmployeeComponent = () => {
                                 <input
                                     type='text'
                                     placeholder='Enter Employee Last Name'
-                                    name='laststName'
+                                    name='lastName'
                                     value={lastName}
                                     className={`form-control ${errors.lastName ? 'is-invalid' : ''}`}
                                     onChange={(e) => setLastName(e.target.value)}
