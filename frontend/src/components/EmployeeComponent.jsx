@@ -39,6 +39,17 @@ const EmployeeComponent = () => {
 
 
 
+    function validateForm(){
+        let valid = true;
+        const errorsCopy = {... errors}
+
+        if(firstName.trim()){
+            errorsCopy.firstName =
+        }
+    }
+
+
+
     return (
         <div className='container'>
             <br /> <br />
