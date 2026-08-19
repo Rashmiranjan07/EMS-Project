@@ -29,7 +29,7 @@ const ListEmployeeComponent = () => {
     }
 
     function removeEmployee(id){
-        
+        console.log(id)
     }
 
     return (
