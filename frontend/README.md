@@ -162,7 +162,7 @@ Vite will display the local development URL in your terminal.
 For example:
 
 ```text
-Local: http://localhost:XXXX
+Local: http://localhost:3000
 ```
 
 > Use the exact URL and port displayed by Vite in your terminal.
