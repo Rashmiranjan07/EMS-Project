@@ -775,23 +775,6 @@ Add screenshots of the actual application here.
 
 ![Edit Employee](./screenshots/edit-employee.png)
 
-> Create a `screenshots` folder in the root directory and place your actual screenshots there.
-
-Recommended structure:
-
-```text
-EMS-Project/
-│
-├── screenshots/
-│   ├── home.png
-│   ├── employees.png
-│   ├── add-employee.png
-│   └── edit-employee.png
-│
-├── backend/
-├── frontend/
-└── README.md
-```
 
 ---
 
@@ -803,22 +786,6 @@ If you deploy the application, add your live URL here:
 🌐 Live Demo:
 YOUR_DEPLOYED_URL
 ```
-
-You can also add a short GIF or video demonstrating:
-
-```text
-Application
-    ↓
-Employee List
-    ↓
-Add Employee
-    ↓
-Update Employee
-    ↓
-Delete Employee
-```
-
----
 
 # 🧠 Key Learning Outcomes
 
