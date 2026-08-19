@@ -9,6 +9,11 @@ const ListEmployeeComponent = () => {
     const navigator = useNavigate();
 
     useEffect(() => {
+        
+    }, []);
+
+
+    function getAllEmployees(){
         listEmployees()
             .then((response) => {
                 setEmployees(response.data);
@@ -16,7 +21,8 @@ const ListEmployeeComponent = () => {
             .catch((error) => {
                 console.error(error);
             });
-    }, []);
+
+    }
 
 
     function addNewEmployee() {
