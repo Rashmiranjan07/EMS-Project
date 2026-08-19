@@ -9,11 +9,11 @@ const ListEmployeeComponent = () => {
     const navigator = useNavigate();
 
     useEffect(() => {
-        
+        getAllEmployees();
     }, []);
 
 
-    function getAllEmployees(){
+    function getAllEmployees() {
         listEmployees()
             .then((response) => {
                 setEmployees(response.data);
