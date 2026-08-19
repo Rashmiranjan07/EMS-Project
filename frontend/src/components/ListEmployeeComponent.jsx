@@ -28,6 +28,10 @@ const ListEmployeeComponent = () => {
         navigator(`/edit-employee/${id}`)
     }
 
+    function removeEmployee(id){
+        
+    }
+
     return (
         <div className="container">
 
