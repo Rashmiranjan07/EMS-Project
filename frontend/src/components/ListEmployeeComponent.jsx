@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { listEmployees } from '../services/EmployeeService';
+import { deleteEmployee, listEmployees } from '../services/EmployeeService';
 import { useNavigate } from 'react-router-dom';
 
 const ListEmployeeComponent = () => {
@@ -30,6 +30,8 @@ const ListEmployeeComponent = () => {
 
     function removeEmployee(id){
         console.log(id);
+
+        deleteEmployee
     }
 
     return (
